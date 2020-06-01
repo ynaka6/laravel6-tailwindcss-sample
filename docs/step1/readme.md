@@ -113,3 +113,8 @@ if (mix.inProduction()) {
 $ npm install
 $ npm run dev
 ```
+
+## 📝 補足
+
+Tailwind CSS用のviewを用意しています。
+viewについては、[laravel-frontend-presets/tailwindcssのテンプレート](https://github.com/laravel-frontend-presets/tailwindcss/tree/master/src/tailwindcss-stubs/resources/views) を利用しています。
