@@ -14,6 +14,8 @@ Laravel6 + Tailwind CSSの開発で利用できるサンプルとなります。
 
 STEP1. [📝 Tailwind CSS セットアップ](https://github.com/ynaka6/laravel6-tailwindcss-sample/blob/master/docs/step1/readme.md)  - [step1](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1)
 
+STEP2. [📝 Mutli Auth機能を利用して管理画面を作成](https://github.com/ynaka6/laravel6-tailwindcss-sample/blob/master/docs/step2/readme.md)  - [step2](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step2)
+
 
 ## License
 [MIT license](https://opensource.org/licenses/MIT).
