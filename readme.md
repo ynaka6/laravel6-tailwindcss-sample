@@ -14,11 +14,6 @@ Laravel6 + Tailwind CSSの開発で利用できるサンプルとなります。
 
 STEP1. [📝 Tailwind CSS セットアップ](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1/docs/step1)  - [step1](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1)
 
-## 📝 補足
-
-Tailwind CSS用のviewを用意しています。
-viewについては、[laravel-frontend-presets/tailwindcssのテンプレート](https://github.com/laravel-frontend-presets/tailwindcss/tree/master/src/tailwindcss-stubs/resources/views) を利用しています。
-
 
 ## License
 [MIT license](https://opensource.org/licenses/MIT).
