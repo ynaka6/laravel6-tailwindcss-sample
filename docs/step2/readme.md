@@ -461,5 +461,33 @@ Route::group(['middleware' => 'auth:admin'], function() {
 });
 ```
 
-### 8. 
+### 8. Controllerの作成
+`app/Http/Controllers/Admin` 配下に管理画面用のControllerを用意します。
 
+| Controller名  |説明  |
+|---|---|
+|`Admin/HomeController`  |ログイン後のHome画面  |
+|`Admin/Auth/LoginController`  |ログイン/ログアウト処理  |
+
+今後機能追加する際も、`Admin`配下にControllerを定義します。
+
+詳細は以下のURLからファイルを参照ください。  
+https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step2/app/Http/Controllers/Admin
+
+### 9. Viewファイル(blade)を作成
+`resources/views/admin` 配下に管理画面用のControllerを用意します。
+
+| blade  |説明  |
+|---|---|
+|`admin/auth/login.blade.php`  |ログイン画面  |
+|`admin/layouts/app.blade.php`  |管理画面用のレイアウトファイル |
+|`admin/home.blade.php`  |ログイン後のHome画面 |
+
+今後機能追加する際も、`admin`ディレクトリ配下にbladeを作成します。
+
+詳細は以下のURLからファイルを参照ください。  
+https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step2/resources/views/admin
+
+### 最後に
+
+ここまで対応すると管理画面の表示とログイン/ログアウトが可能になります。
