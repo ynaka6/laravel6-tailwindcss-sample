@@ -12,7 +12,7 @@ Laravel6 + Tailwind CSSの開発で利用できるサンプルとなります。
 
 ## 📝 開発 - STEP
 
-STEP1. [📝 Tailwind CSS セットアップ](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1/docs/step1)  - [step1](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1)
+STEP1. [📝 Tailwind CSS セットアップ](https://github.com/ynaka6/laravel6-tailwindcss-sample/blob/master/docs/step1/readme.md)  - [step1](https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step1)
 
 
 ## License
