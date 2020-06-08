@@ -334,7 +334,40 @@ class Handler extends ExceptionHandler
 
 ```
 
-### 7. ルーティングを定義
+### 7. Middleware/Authenticate.phpの修正
+
+`app/Http/Middleware/Authenticate.php`を修正し、adminへのアクセスのリダイレクト設定をちかします。  
+以下のように修正してください。
+
+```
+<?php
+
+namespace App\Http\Middleware;
+
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+
+class Authenticate extends Middleware
+{
+    /**
+     * Get the path the user should be redirected to when they are not authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return string
+     */
+    protected function redirectTo($request)
+    {
+        if (! $request->expectsJson()) {
+            // ##### 修正部分 ##### //
+            return $request->is('admin*')
+                ? route('admin.login')
+                : route('login');
+            // ##### ここまで ##### //
+        }
+    }
+}
+```
+
+### 8. ルーティングを定義
 
 管理画面用のルーティングを定義します。
 
@@ -461,7 +494,7 @@ Route::group(['middleware' => 'auth:admin'], function() {
 });
 ```
 
-### 8. Controllerの作成
+### 9. Controllerの作成
 `app/Http/Controllers/Admin` 配下に管理画面用のControllerを用意します。
 
 | Controller名  |説明  |
@@ -474,7 +507,7 @@ Route::group(['middleware' => 'auth:admin'], function() {
 詳細は以下のURLからファイルを参照ください。  
 https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step2/app/Http/Controllers/Admin
 
-### 9. Viewファイル(blade)を作成
+### 10. Viewファイル(blade)を作成
 `resources/views/admin` 配下に管理画面用のControllerを用意します。
 
 | blade  |説明  |
