@@ -15,9 +15,9 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
-    <div id="app">
-        <nav class="bg-blue-900 shadow mb-8 py-6">
+<body class="bg-gray-100 antialiased leading-none">
+    <div id="app" class="h-screen">
+        <nav class="fixed w-full bg-gray-900 shadow py-6 z-10">
             <div class="container mx-auto px-6 md:px-0">
                 <div class="flex items-center justify-center">
                     <div class="mr-6">
@@ -43,7 +43,39 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="flex flex-grow">
+            @if (!Request::is('admin/login'))
+                <div
+                    class="fixed top-0 bottom-0 w-64 mt-16 bg-gray-800 text-white shadow lg:block"
+                >
+                    <div class="my-1 h-full overflow-y-scroll">
+                        <a
+                            href="/"
+                            class="flex justify-between items-center px-4 py-4 font-bold text-sm hover:bg-gray-900 border-b border-gray-600"
+                        >
+                            <span>
+                                ダッシュボード
+                            </span>
+                        </a>
+                        <a
+                            href="/"
+                            class="flex justify-between items-center px-4 py-4 font-bold text-sm hover:bg-gray-900 border-b border-gray-600"
+                        >
+                            <span>
+                                ニュース管理
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            @endif
+            <div
+                class="w-full overflow-hidden mt-16 px-2 py-4 lg:px-12 lg:py-8 {{ Request::is('admin/login') ? '' : 'ml-64' }}"
+            >
+                @yield('content')
+            </div>
+        </div>
+
+        
     </div>
 </body>
 </html>
