@@ -524,3 +524,10 @@ https://github.com/ynaka6/laravel6-tailwindcss-sample/tree/step2/resources/views
 ### 最後に
 
 ここまで対応すると管理画面の表示とログイン/ログアウトが可能になります。
+
+
+### [補足: レイアウトについて]
+以下のように共通レイアウトを修正することで、管理ダッシュボードのレイアウトができます。
+https://github.com/ynaka6/laravel6-tailwindcss-sample/blob/master/resources/views/admin/layouts/app.blade.php
+
+![ダッシュボードサンプル](https://github.com/ynaka6/laravel6-tailwindcss-sample/blob/master/screenshots/2020-06-08_admin_dashboard_sample_ui.png)
